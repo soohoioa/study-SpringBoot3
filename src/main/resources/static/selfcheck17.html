@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>셀프체크 17</title>
+</head>
+<body>
+<h1>Hello, <span id="target">World</span>!</h1> <!-- 초기에 "Hello, World!"가 표시 -->
+<input type="text" id="text-input"> <!-- 사용자가 입력할 수 있는 텍스트 입력 필드 -->
+<button id="send-btn">전송</button> <!-- 클릭 시 이벤트가 발생하는 버튼 -->
+
+<script>
+    // 입력 필드 요소를 선택하여 변수에 저장
+    const inputElement = document.querySelector("#text-input");
+    // 버튼 요소를 선택하여 변수에 저장
+    const buttonElement = document.querySelector("#send-btn");
+
+    // 버튼 클릭 이벤트 핸들러를 추가
+    buttonElement.addEventListener("click", function () {
+        // 입력 필드의 값을 가져와 변수에 저장
+        const str = inputElement.value;
+        // 입력 필드의 값을 초기화 (비우기)
+        inputElement.value = "";
+        // id가 'target'인 요소의 텍스트를 입력값으로 변경
+        target.innerText = str;
+    });
+</script>
+</body>
+</html>
